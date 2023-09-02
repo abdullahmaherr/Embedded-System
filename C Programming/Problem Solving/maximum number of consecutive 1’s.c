@@ -11,7 +11,7 @@
  *************************************************************************************************************/
 #include<stdio.h>
 
-int masking(unsigned int a)
+int masking(unsigned int num)
 {
 	unsigned int mask = 0x80000000;
 	unsigned int i;
@@ -19,7 +19,7 @@ int masking(unsigned int a)
 	int counter = 0,max = 0;
 	for(i = 0; i < 32; i++)
 	{
-		if(((a << i) & mask))
+		if(((num << i) & mask))
 		{
 			++counter;
 			if(max <= counter)
