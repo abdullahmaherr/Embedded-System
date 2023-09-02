@@ -101,12 +101,12 @@ LOAD linker stubs
  .debug_aranges
                 0x00000040       0x20 uart.o
 
-.debug_str      0x00000000      0x106
- .debug_str     0x00000000       0x5d startup.o
- .debug_str     0x0000005d       0x96 app.o
-                                 0xdb (size before relaxing)
- .debug_str     0x000000f3       0x13 uart.o
-                                 0xca (size before relaxing)
+.debug_str      0x00000000      0x11b
+ .debug_str     0x00000000       0x72 startup.o
+ .debug_str     0x00000072       0x96 app.o
+                                 0xf0 (size before relaxing)
+ .debug_str     0x00000108       0x13 uart.o
+                                 0xdf (size before relaxing)
 
 .debug_frame    0x00000000       0x5c
  .debug_frame   0x00000000       0x2c app.o
