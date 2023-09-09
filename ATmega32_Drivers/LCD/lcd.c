@@ -1,40 +1,33 @@
 /*============================================================================================
- * Module : GPIO
+ * Module : LCD
  *
  * File Name : lcd.c
  *
  * Author: Abdullah Maher
  *
- * Description : Source File Of ATmega32 LCD Driver
+ * Description : Source File Of LCD Driver
  *
  * Created on: May 1, 2023
  =============================================================================================*/
 #include "lcd.h"
 #include "gpio.h"
-
-
-
+#include"atmega32.h"
 
 
 void HAL_LCD_Init(void)
 {
-	Config_t data;
-
 	/* Configure RS Pin */
-	data.PORT = LCD_RS_PORT_ID; data.PinNumber = LCD_RS_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_RS_PORT_ID, LCD_RS_PIN_ID,GPIO_PIN_OUTPUT);
 
 	/* Configure E Pin */
-	data.PORT = LCD_E_PORT_ID; data.PinNumber = LCD_E_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_E_PORT_ID,LCD_E_PIN_ID, GPIO_PIN_OUTPUT);
 
 	_delay_ms(20);/*Delay for Processing*/
 
 #if(LCD_DATA_BITS_MODE == 8)
 
 	/* Configure the data port as output port */
-	data.PORT = LCD_DATA_PORT_ID; data.Direction = GPIO_PORT_OUTPUT;
-	MCAL_GPIO_PortInit(&data);
+	MCAL_GPIO_PortInit(LCD_DATA_PORT_ID, GPIO_PORT_OUTPUT);
 
 	/* use 2-lines LCD + 8-bits Data Mode + 5*7 dot display Mode */
 	HAL_LCD_SendCommand(LCD_TWO_LINES_EIGHT_BITS_MODE);
@@ -42,17 +35,13 @@ void HAL_LCD_Init(void)
 #elif(LCD_DATA_BITS_MODE == 4)
 
 	/* Configure 4 pins in the data port as output pins */
-	data.PORT = LCD_DATA_PORT_ID; data.PinNumber = LCD_DB4_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_DATA_PORT_ID,LCD_DB4_PIN_ID, GPIO_PIN_OUTPUT);
 
-	data.PORT = LCD_DATA_PORT_ID; data.PinNumber = LCD_DB5_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_DATA_PORT_ID,LCD_DB5_PIN_ID, GPIO_PIN_OUTPUT);
 
-	data.PORT = LCD_DATA_PORT_ID; data.PinNumber = LCD_DB6_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_DATA_PORT_ID,LCD_DB6_PIN_ID, GPIO_PIN_OUTPUT);
 
-	data.PORT = LCD_DATA_PORT_ID; data.PinNumber = LCD_DB7_PIN_ID; data.Direction = GPIO_PIN_OUTPUT;
-	MCAL_GPIO_PinInit(&data);
+	MCAL_GPIO_PinInit(LCD_DATA_PORT_ID,LCD_DB7_PIN_ID, GPIO_PIN_OUTPUT);
 
 	/* Send for 4 bit initialization of LCD  */
 	HAL_LCD_SendCommand(LCD_TWO_LINES_FOUR_BITS_MODE_INIT1);
@@ -189,7 +178,7 @@ void HAL_LCD_ClearScreen(void)
 	HAL_LCD_SendCommand(LCD_CLEAR_LCD);
 }
 
-void IntgerToString(int32_t a_data)
+void HAL_LCD_IntgerToString(int32_t a_data)
 {
 	uint8_t buffer[16];
 	itoa(a_data,buffer,10);/*The function ltoa() converts the long integer value from val into an ASCII representation*/

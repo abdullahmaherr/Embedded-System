@@ -24,16 +24,6 @@
 
 
 /*===============================================================================
- *                            User Type Definitions                              *
- ================================================================================*/
-typedef struct
-{
-	uint8_t PORT;      /* @ref Port Number ID */
-	uint8_t PinNumber; /* @ref Pin Number ID */
-	uint8_t Direction; /* @ref Pin Direction if Input or output  or @ref port Direction if Input or output */
-}Config_t;
-
-/*===============================================================================
  *                       Macros Configuration References                         *
  ================================================================================*/
 #define NUM_OF_PORTS           	 4
@@ -71,10 +61,10 @@ typedef struct
 /**===============================================================================
  * Function Name  : MCAL_GPIO_PinInit.
  * Brief          : Function To Initialization a Pin in PORTx.
- * Parameter (in) : Pointer To Pin Configuration.
+ * Parameter (in) : Pin Configuration.
  * Return         : None.
  * Note           : None*/
-void MCAL_GPIO_PinInit(Config_t * p_Configuratin);
+void MCAL_GPIO_PinInit(uint8_t PORTx, uint8_t PINx, uint8_t Direction);
 
 /**===============================================================================
  * Function Name  : MCAL_GPIO_ReadPin.
@@ -114,9 +104,9 @@ void MCAL_GPIO_WritePort(uint8_t PORTx, uint8_t a_Value);
 /**===============================================================================
  * Function Name  : MCAL_GPIO_PortInit.
  * Brief          : Function To Initialization a PORTx.
- * Parameter (in) : Pointer To PORT Configuration.
+ * Parameter (in) : PORT Configuration.
  * Return         : None.
  * Note           : None*/
-void MCAL_GPIO_PortInit(Config_t * p_Configuratin);
+void MCAL_GPIO_PortInit(uint8_t PORTx, uint8_t Direction);
 
 #endif /* INC_GPIO_H_ */

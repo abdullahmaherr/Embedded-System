@@ -12,90 +12,90 @@
 
 #include "gpio.h"
 
-void MCAL_GPIO_PinInit(Config_t * p_Configuratin)
+void MCAL_GPIO_PinInit(uint8_t PORTx, uint8_t PINx, uint8_t Direction)
 {
 	/*
 	 * Check if the input port number is greater than NUM_OF_PINS_PER_PORT.
 	 * Or if the input pin number is greater than NUM_OF_PINS_PER_PORT.
 	 */
-	if((p_Configuratin->PinNumber >= NUM_OF_PINS) || (p_Configuratin->PORT >= NUM_OF_PORTS))
+	if((PINx >= NUM_OF_PINS) || (PORTx >= NUM_OF_PORTS))
 	{
 		/* Do Nothing */
 	}
 	else
 	{
 		/* Setup the pin direction as Given */
-		switch(p_Configuratin->PORT)
+		switch(PORTx)
 		{
 		case GPIOA_ID:
-			if(p_Configuratin->Direction == GPIO_PIN_OUTPUT)
+			if(Direction == GPIO_PIN_OUTPUT)
 			{
-				SET_BIT(DDRA,(p_Configuratin->PinNumber));
+				SET_BIT(DDRA,PINx);
 			}
 			else
 			{
-				CLEAR_BIT(DDRA,(p_Configuratin->PinNumber));
+				CLEAR_BIT(DDRA,PINx);
 			}
 			break;
 		case GPIOB_ID:
-			if(p_Configuratin->Direction == GPIO_PIN_OUTPUT)
+			if(Direction == GPIO_PIN_OUTPUT)
 			{
-				SET_BIT(DDRB,(p_Configuratin->PinNumber));
+				SET_BIT(DDRB,PINx);
 			}
 			else
 			{
-				CLEAR_BIT(DDRB,(p_Configuratin->PinNumber));
+				CLEAR_BIT(DDRB,PINx);
 			}
 			break;
 		case GPIOC_ID:
-			if(p_Configuratin->Direction == GPIO_PIN_OUTPUT)
+			if(Direction == GPIO_PIN_OUTPUT)
 			{
-				SET_BIT(DDRC,(p_Configuratin->PinNumber));
+				SET_BIT(DDRC,PINx);
 			}
 			else
 			{
-				CLEAR_BIT(DDRC,(p_Configuratin->PinNumber));
+				CLEAR_BIT(DDRC,PINx);
 			}
 			break;
 		case GPIOD_ID:
-			if(p_Configuratin->Direction == GPIO_PIN_OUTPUT)
+			if(Direction == GPIO_PIN_OUTPUT)
 			{
-				SET_BIT(DDRD,(p_Configuratin->PinNumber));
+				SET_BIT(DDRD,PINx);
 			}
 			else
 			{
-				CLEAR_BIT(DDRD,(p_Configuratin->PinNumber));
+				CLEAR_BIT(DDRD,PINx);
 			}
 			break;
 		}
 	}
 }
 
-void MCAL_GPIO_PortInit(Config_t * p_Configuratin)
+void MCAL_GPIO_PortInit(uint8_t PORTx, uint8_t Direction)
 {
 	/*
 	 * Check if the input port number is greater than NUM_OF_PINS_PER_PORT.
 	 */
-	if(p_Configuratin->PORT >= NUM_OF_PORTS)
+	if(PORTx >= NUM_OF_PORTS)
 	{
 		/* Do Nothing */
 	}
 	else
 	{
 		/* Setup the pin direction as Given */
-		switch(p_Configuratin->PORT)
+		switch(PORTx)
 		{
 		case GPIOA_ID:
-			DDRA = p_Configuratin->Direction;
+			DDRA = Direction;
 			break;
 		case GPIOB_ID:
-			DDRB = p_Configuratin->Direction;
+			DDRB = Direction;
 			break;
 		case GPIOC_ID:
-			DDRC = p_Configuratin->Direction;
+			DDRC = Direction;
 			break;
 		case GPIOD_ID:
-			DDRD = p_Configuratin->Direction;
+			DDRD = Direction;
 			break;
 		}
 	}

@@ -1,11 +1,11 @@
 /*============================================================================================
- * Module : GPIO
+ * Module : LCD
  *
  * File Name : lcd.h
  *
  * Author: Abdullah Maher
  *
- * Description : Header File Of ATmega32 LCD Driver
+ * Description : Header File Of LCD Driver
  *
  * Created on: May 1, 2023
  =============================================================================================*/
@@ -136,6 +136,6 @@ void HAL_LCD_ClearScreen(void);
  * Parameter (in) : The Integer Number.
  * Return         : None.
  * Note           : None*/
-void IntgerToString(int32_t a_data);
+void HAL_LCD_IntgerToString(int32_t a_data);
 
 #endif /* INC_LCD_H_ */
