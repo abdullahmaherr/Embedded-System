@@ -80,12 +80,12 @@ void LINKED_LIST_insertNodeAtLast()
 	LINKED_LIST_fillNode(pNewNode);
 }
 
-void LINKED_LIST_insertNode(uint32 position)
+void LINKED_LIST_insertNode(uint32_t position)
 {
 	node *pNewNode;
 	node *pPrevious;           /*Pointer To The Previous Node*/
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	/*Check If Number is Valid*/
 	if((position < 0) || ((position > LINKED_LIST_LengthLinkedList())))
@@ -123,11 +123,11 @@ void LINKED_LIST_insertNode(uint32 position)
 	LINKED_LIST_fillNode(pNewNode);
 }
 
-void LINKED_LIST_deleteNode(uint32 position)
+void LINKED_LIST_deleteNode(uint32_t position)
 {
 	node *pPrevious;           /*Pointer To The Previous Node*/
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	/*Check If Number is Valid*/
 	if((position < 0) || ((position > LINKED_LIST_LengthLinkedList())))
@@ -172,10 +172,10 @@ void LINKED_LIST_deleteLinkedList()
 	gpHead = NULL;
 }
 
-node* LINKED_LIST_getNthNodeFirst(uint32 position)
+node* LINKED_LIST_getNthNodeFirst(uint32_t position)
 {
 	node *pCurrent = gpHead;   /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	/*Check If Number is Valid*/
 	if((position < 0) || ((position > LINKED_LIST_LengthLinkedList())))
@@ -195,11 +195,11 @@ node* LINKED_LIST_getNthNodeFirst(uint32 position)
 	return pCurrent;
 }
 
-node* LINKED_LIST_getNthNodeLast(uint32 position)
+node* LINKED_LIST_getNthNodeLast(uint32_t position)
 {
 	node *pPrevious = gpHead;           /*Pointer To The Previous Node*/
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	/* Navigate until get to the certain node*/
 	while(pCurrent->pNext)
@@ -219,7 +219,7 @@ node* LINKED_LIST_getMiddleNode()
 {
 	node *pPrevious = gpHead;           /*Pointer To The Previous Node*/
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	/*check if the list is empty*/
 	if(gpHead==NULL)
@@ -244,10 +244,10 @@ node* LINKED_LIST_getMiddleNode()
 	return pPrevious;
 }
 
-uint32 LINKED_LIST_LengthLinkedList()
+uint32_t LINKED_LIST_LengthLinkedList()
 {
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 length = 0;
+	uint32_t length = 0;
 
 	/* Navigate until get to the certain node*/
 	while(pCurrent)
@@ -283,7 +283,7 @@ void LINKED_LIST_reverseLinkedList()
 
 void LINKED_LIST_fillNode(node *pNodeToFill)/*This Function Depend on the Application*/
 {
-	uint8 temp[40];
+	uint8_t temp[40];
 
 	printf("Enter The Student ID : ");
 	fflush(stdin); fflush(stdout);
@@ -305,7 +305,7 @@ void LINKED_LIST_fillNode(node *pNodeToFill)/*This Function Depend on the Applic
 void LINKED_LIST_printLinkedList()/*This Function Depend on the Application*/
 {
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	if(gpHead == NULL_PTR)
 	{
@@ -346,10 +346,10 @@ void LINKED_LIST_printNode(node *pNodeToPrint)/*This Function Depend on the Appl
 
 }
 
-uint32 LINKED_LIST_position(uint32 id)/*This Function Depend on the Application*/
+uint32_t LINKED_LIST_position(uint32_t id)/*This Function Depend on the Application*/
 {
 	node *pCurrent = gpHead;            /*Pointer To The Current Node*/
-	uint32 count = 0;
+	uint32_t count = 0;
 
 	while(pCurrent)
 	{

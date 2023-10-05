@@ -1,5 +1,5 @@
 /*============================================================================================
- * Module :
+ * Module : Standard Types
  *
  * File Name : std_types.h
  *
@@ -8,33 +8,59 @@
  * Description : Standard Types
  *
  * Created on: Apr 30, 2023
-=============================================================================================*/
+ =============================================================================================*/
 
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
 
-typedef unsigned char         uint8;
-typedef signed char           sint8;
-typedef unsigned short        uint16;
-typedef signed short          sint16;
-typedef unsigned long         uint32;
-typedef signed long           sint32;
-typedef unsigned long long    uint64;
-typedef signed long long      sint64;
-typedef float                 float32;
-typedef double                float64;
+/* Unsigned Integer Data Types */
+typedef unsigned char								uint8_t;
+typedef unsigned short int							uint16_t;
+typedef unsigned long int				 			uint32_t;
+typedef unsigned long long int						uint64_t;
+
+
+/* Signed Integer Data Types */
+typedef char										sint8_t;
+typedef short int									sint16_t;
+typedef long int		 							sint32_t;
+typedef long long int								sint64_t;
+
+
+/* Volatile Unsigned Integer Data Types */
+typedef volatile unsigned char						vuint8_t;
+typedef volatile unsigned short int					vuint16_t;
+typedef volatile unsigned long int		 			vuint32_t;
+typedef volatile unsigned long long int				vuint64_t;
+
+
+/* Volatile Signed Integer Data Types */
+typedef volatile char								vsint8_t;
+typedef volatile short int							vsint16_t;
+typedef volatile long int		 					vsint32_t;
+typedef volatile long long int						vsint64_t;
+
+
+/* Float Data Types */
+typedef float										float32;
+typedef double										float64;
+
+
+/* Boolean Data Types */
+typedef enum
+{
+	FALSE,
+	TRUE
+}bool;
+
+
+/* Error Data Types for indication */
+typedef enum
+{
+	INVALIDARGUMENT,
+	OVERFLOW,
+}Error;
 
 #define NULL_PTR ((void*)0)
-
-#define LOGIC_HIGH (1u)
-#define LOGIC_LOW (0u)
-
-#ifndef TRUE
-#define TRUE (1u)
-#endif
-
-#ifndef FALSE
-#define FALSE (0u)
-#endif
 
 #endif /* STD_TYPES_H_ */

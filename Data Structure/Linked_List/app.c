@@ -15,13 +15,13 @@
 
 int main(void)
 {
-	uint32 option,position,temp;
+	uint32_t option,position,temp;
 	node *TempPtr = NULL_PTR;
 
 	while(1)
 	{
 		printf("===============================\n");
-		printf("Choose One Of The Following Option\n1:Add New Student\n2:Delete Student\n3:View Students\n4:Delete All\n5:View Student Data\n6:Number Of Students\n");
+		printf("Choose One Of The Following Option\n1:Add New Student\n2:Delete Certin Student Data\n3:View All Students\n4:Delete All\n5:View Certin Student Data\n6:Number Of Students\n");
 		printf("===============================\n");
 		fflush(stdin); fflush(stdout);
 		scanf("%d",&option);

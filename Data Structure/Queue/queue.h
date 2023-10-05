@@ -17,7 +17,7 @@
 /*******************************************Configuration******************************************/
 
 /*Selecting The Data Type (uint8,uint16,uint32,.....)*/
-#define DATA_TYPE_t uint32
+#define DATA_TYPE_t uint32_t
 
 
 /*******************************************Type Definition******************************************/

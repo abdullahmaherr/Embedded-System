@@ -17,7 +17,7 @@
 /*******************************************Configuration******************************************/
 
 /*Selecting The Data Type (uint8,uint16,uint32,.....)*/
-#define DATA_TYPE_t uint32
+#define DATA_TYPE_t uint32_t
 
 
 /*******************************************Type Definition******************************************/
@@ -29,7 +29,10 @@ typedef struct{
 }STACK_buff_t;
 
 typedef enum{
-	STACK_NO_ERROR,STACK_FULL,STACK_EMPTY,STACK_NULL
+	STACK_NO_ERROR,
+	STACK_FULL,
+	STACK_EMPTY,
+	STACK_NULL
 }STACK_status;
 
 /*******************************************API******************************************/

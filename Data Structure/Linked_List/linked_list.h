@@ -19,8 +19,8 @@
 
 /* Enter Your Data (example data of school students )*/
 typedef struct{
-	uint32 ID;
-	uint8 NAME[40];
+	uint32_t ID;
+	uint8_t NAME[40];
 	float32 GRADE;
 }data;
 
@@ -53,14 +53,14 @@ void LINKED_LIST_insertNodeAtLast();
  * Function that insert linked list node at any position
  * Takes the position of the node as input
  */
-void LINKED_LIST_insertNode(uint32 position);
+void LINKED_LIST_insertNode(uint32_t position);
 
 /*****************************************************************************************
  * Description :
  * Function that delete Certain Node.
  * Takes the position of the node as input
  */
-void LINKED_LIST_deleteNode(uint32 position);
+void LINKED_LIST_deleteNode(uint32_t position);
 
 /*****************************************************************************************
  * Description :
@@ -74,14 +74,14 @@ void LINKED_LIST_deleteLinkedList();
  * Function that returns the data inside the Nth element from the beginning of linked list
  * Take The Position Of Node ,Return The Address of Certain Node
  */
-node* LINKED_LIST_getNthNodeFirst(uint32 position);
+node* LINKED_LIST_getNthNodeFirst(uint32_t position);
 
 /*****************************************************************************************
  * Description :
  * Function that returns the data inside the Nth element from the end of linked list
  * Take The Position Of Node ,Return The Address of Certain Node
  */
-node* LINKED_LIST_getNthNodeLast(uint32 position);
+node* LINKED_LIST_getNthNodeLast(uint32_t position);
 
 /*****************************************************************************************
  * Description :
@@ -97,7 +97,7 @@ node* LINKED_LIST_getMiddleNode();
  * if linked list contains only one node return the data inside this node
  *
  */
-uint32 LINKED_LIST_LengthLinkedList();
+uint32_t LINKED_LIST_LengthLinkedList();
 
 /*****************************************************************************************
  * Description :
@@ -129,6 +129,6 @@ void LINKED_LIST_printNode(node *pNodeToPrint);
  * Function that Find data of Certain node of linked list.
  * Definition of the function depend on the Program
  */
-uint32 LINKED_LIST_position(uint32 id);
+uint32_t LINKED_LIST_position(uint32_t id);
 
 #endif /*LINKED_LIST_H_*/
