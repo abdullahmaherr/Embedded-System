@@ -25,11 +25,6 @@
  extern uint32_t _E_BSS;
  extern uint32_t _E_STACK;
  
- void Default_Handler()
- {
-	 Reset_Handler();
- }
- 
  
  uint32_t vectors[]__attribute__((section(".vectors"))) = {
 	(uint32_t) &_E_STACK,
@@ -42,6 +37,13 @@
  
  };
 
+ 
+  void Default_Handler()
+ {
+	 Reset_Handler();
+ }
+ 
+ 
  
   void Reset_Handler()
   {
