@@ -1,0 +1,54 @@
+# Author : Abdullah Maher        Makefile       $@ target / $< dependencies/ % for genaric
+
+#CC FOR Cross Compiler
+CC=arm-none-eabi-
+
+#CFLAGS for list of flags or Options
+CFLAGS=-mcpu=cortex-m3 -s -g -gdwarf-2
+
+#include directory
+INCS=-I .
+
+#LIBS for not standard lib
+LIBS=
+
+#WildCard for all File.c
+SRC =$(wildcard *.c) 
+
+#WildCard for all File.o from file.c
+OBJ =$(SRC:.c=.o)
+
+#WildCard for all File.s
+AS =$(wildcard *.s)
+
+#WildCard for all File.o from file.s
+ASOBJ =$(AS:.s=.o)
+
+
+PROJECT_NAME =STM32F103C8_Drivers
+
+all : $(PROJECT_NAME).bin
+	@echo "=====================Build is Done======================="
+
+startup.o: startup.s
+	$(CC)as.exe  $(CFLAGS) $< -o $@
+
+%.o: %.c
+	$(CC)gcc.exe -c $(INCS) $(CFLAGS) $< -o $@
+
+$(PROJECT_NAME).elf: $(OBJ) $(ASOBJ)
+	$(CC)ld.exe -T linker_script.ld $(LIBS) $(OBJ) $(ASOBJ) -o $@ -Map=Map_File.map
+
+$(PROJECT_NAME).list: $(PROJECT_NAME).elf
+	$(CC)objdump.exe -h -S binary $< $@
+
+$(PROJECT_NAME).bin: $(PROJECT_NAME).elf
+	$(CC)objcopy.exe -O binary $< $@
+
+clean_all:
+	rm *.o *.elf *.bin *.map
+	@echo "================ All Files Deleted ============="
+
+clean:
+	rm *.elf *.bin
+	@echo "================ Executables Files Deleted ============"
