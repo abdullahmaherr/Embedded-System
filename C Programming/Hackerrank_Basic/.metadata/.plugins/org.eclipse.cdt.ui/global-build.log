@@ -1,0 +1,66 @@
+13:51:19 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+..\maximum_cost_of_labtop_count.c: In function 'maxCost':
+..\maximum_cost_of_labtop_count.c:24:30: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   24 |                 if(labels[i] == "legal")
+      |                              ^~
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+Info: Nothing to build for Maximum_Cost_Of_Labtop_Count
+Info: Nothing to build for Maximum_Cost_Of_Labtop_Count
+Info: Nothing to build for Maximum_Cost_Of_Labtop_Count
+13:58:00 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+..\maximum_cost_of_labtop_count.c: In function 'maxCost':
+..\maximum_cost_of_labtop_count.c:24:33: warning: comparison between pointer and integer
+   24 |                 if(*(labels[i]) == "legal")
+      |                                 ^~
+..\maximum_cost_of_labtop_count.c:24:33: warning: comparison with string literal results in unspecified behavior [-Waddress]
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+14:04:58 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+14:06:24 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+14:11:14 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+14:14:36 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+17:04:40 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+17:07:15 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+17:10:28 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+Info: Nothing to build for Maximum_Cost_Of_Labtop_Count
+17:21:48 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+Info: Nothing to build for Maximum_Cost_Of_Labtop_Count
+17:27:30 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+..\maximum_cost_of_labtop_count.c: In function 'maxCost':
+..\maximum_cost_of_labtop_count.c:20:15: warning: unused variable 'j' [-Wunused-variable]
+   20 |         int i,j,count = 0,result = 0,max = 0;
+      |               ^
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+17:27:44 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 

@@ -1,0 +1,31 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : username_changes.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char **possibleChanges(int usernames_count, char **usernames, int *result_count)
+{
+
+}
+
+
+int main(void)
+{
+	int i,usernames_count;
+
+	scanf("%d"&usernames_count);
+	fflush(stdin);fflush(stdout);
+
+	char **usernames = (char**)malloc(usernames_count * sizeof(char*));
+	for()
+}

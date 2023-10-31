@@ -1,0 +1,25 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : road_repair.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+
+#define ARR_CREW_SIZE 100000
+#define ARR_JOB_SIZE 100000
+
+int main(void)
+{
+	int crew_id_count;
+	scanf("%d", &crew_id_count);
+
+
+	int job_id_count;
+	scanf("%d", &job_id_count);
+}

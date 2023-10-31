@@ -1,0 +1,27 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : nearly_similar_rectangle.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+long nearlySimilarRectangles(int sides_rows, int sides_columns, long **sides)
+{
+
+}
+
+
+int main(void)
+{
+
+}
+

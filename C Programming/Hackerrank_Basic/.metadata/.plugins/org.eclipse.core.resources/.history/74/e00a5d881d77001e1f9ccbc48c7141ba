@@ -1,0 +1,108 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : string_anagram.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+
+void countCharfreq(int *arr, char *str)
+{
+	while(*str)
+	{
+		arr[*str - 'a']++;
+		str++;
+	}
+}
+
+
+void stringAnagram(char** dictionary, int dictionaryCount,char** query, int queryCount)
+{
+	printf("zzxzxzx\n");fflush(stdin);fflush(stdout);
+	int i,j,k;
+	int result[ARR_QUERY_SIZE];
+	int dictionCharFreq[ARR_DICTIONARY_SIZE][26];
+	int queryCharFreq[ARR_QUERY_SIZE][26];
+
+	printf("666666\n");fflush(stdin);fflush(stdout);
+	for(i = 0; i < dictionaryCount; i++)
+	{
+		countCharfreq(dictionCharFreq[i], dictionary[i]);
+	}
+
+	printf("77777\n");fflush(stdin);fflush(stdout);
+	for(i = 0; i < queryCount; i++)
+	{
+		countCharfreq(queryCharFreq[i], query[i]);
+	}
+
+	printf("888888\n");fflush(stdin);fflush(stdout);
+	for(i = 0; i<queryCount; i++)
+	{
+		for(j = 0; j<dictionaryCount; j++)
+		{
+			if(strlen(query[i]) == strlen(dictionary[i]))
+			{
+				for(k = 0; k <26; k++)
+				{
+					if(dictionCharFreq[j][k] != queryCharFreq[i][k])
+					{
+						break;
+					}
+				}
+
+				if(k == 26)
+				{
+					result[i]++;
+				}
+			}
+		}
+	}
+
+
+
+
+	for(i = 0; i < queryCount; i++)
+	{
+		printf("%d\n",result[i]);
+	}
+}
+
+
+int main(void)
+{
+	int i,dictionaryCount,queryCount;
+
+
+	scanf("%d", &dictionaryCount);
+
+	char** dictionary = (char**)malloc( dictionaryCount * sizeof(char*));
+	for (i = 0; i < dictionaryCount; i++)
+	{
+		dictionary[i] = (char*)malloc( 16 * sizeof(char));
+		scanf("%15s", dictionary[i]);
+	}
+
+
+	scanf("%d", &queryCount);
+
+	char** query = (char**)malloc( queryCount * sizeof(char*));
+	for (i = 0; i < queryCount; i++)
+	{
+		query[i] = (char*)malloc( 16 * sizeof(char));
+		scanf("%15s", query[i]);
+	}
+
+	stringAnagram(dictionary,dictionaryCount,query,queryCount);
+}
+
+

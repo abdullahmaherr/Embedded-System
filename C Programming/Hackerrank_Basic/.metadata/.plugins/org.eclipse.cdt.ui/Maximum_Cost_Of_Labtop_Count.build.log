@@ -1,0 +1,7 @@
+17:27:44 **** Incremental Build of configuration Debug for project Maximum_Cost_Of_Labtop_Count ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o maximum_cost_of_labtop_count.o "..\\maximum_cost_of_labtop_count.c" 
+gcc -o Maximum_Cost_Of_Labtop_Count.exe maximum_cost_of_labtop_count.o 
+
+17:27:45 Build Finished. 0 errors, 0 warnings. (took 1s.82ms)
+

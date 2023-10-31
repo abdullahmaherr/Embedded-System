@@ -1,0 +1,27 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : unexpected_demand.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+int filledOrders(int order_count, int *order, int k)
+{
+
+}
+
+
+
+int main(void)
+{
+	int i,order_count = 0;
+}

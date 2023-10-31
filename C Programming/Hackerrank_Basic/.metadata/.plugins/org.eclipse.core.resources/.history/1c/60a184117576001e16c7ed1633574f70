@@ -1,0 +1,92 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : road_repair.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+
+#define ARR_CREW_ID_SIZE 100000
+#define ARR_JOB_ID_SIZE 100000
+
+void swap(int *a,int *b)
+{
+	(*a) = (*a) + (*b);
+	(*b) = (*a) - (*b);
+	(*a) = (*a) - (*b);
+}
+
+
+void arrange_desc(int *arr,int size)
+{
+	int i,j;
+
+	for(i = 0; i < size; i++)
+	{
+		for(j = 0; j < size-i-1; j++)
+		{
+			if(arr[j] > arr[j+1])
+			{
+				swap(&arr[j], &arr[j+1]);
+			}
+
+		}
+	}
+}
+
+long getMinCost(int crew_id_count, int *crew_id, int job_id_count, int *job_id)
+{
+	int i;
+	long result = 0;
+
+	arrange_desc(crew_id,crew_id_count);
+	arrange_desc(job_id,job_id_count);
+
+	for(i = 0; i < crew_id_count; i++)
+	{
+		result += abs(crew_id[i]-job_id[i]);
+	}
+
+	return result;
+}
+
+
+int main(void)
+{
+	int i;
+	int crew_id[ARR_CREW_ID_SIZE];
+	int job_id[ARR_JOB_ID_SIZE];
+	long MinCost = 0;
+
+	printf("11111\n");fflush(stdin);fflush(stdout);
+	int crew_id_count;
+	scanf("%d", &crew_id_count);
+
+	printf("11111\n");fflush(stdin);fflush(stdout);
+	for(i = 0; i < crew_id_count; i++)
+	{
+		scanf("%d", &crew_id[i]);
+	}
+
+
+	printf("11111\n");fflush(stdin);fflush(stdout);
+	int job_id_count;
+	scanf("%d", &job_id_count);
+
+	printf("11111\n");fflush(stdin);fflush(stdout);
+	for(i = 0; i < job_id_count; i++)
+	{
+		scanf("%d", &job_id[i]);
+	}
+
+
+	MinCost = getMinCost(crew_id_count, crew_id, job_id_count, job_id);
+
+	printf("%ld\n", MinCost);
+
+}

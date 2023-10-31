@@ -1,0 +1,55 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : road_repair.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+
+#define ARR_CREW_ID_SIZE 100000
+#define ARR_JOB_ID_SIZE 100000
+
+
+
+long getMinCost(int crew_id_count, int *crew_id, int job_id_count, int *job_id)
+{
+	int i,j;
+
+}
+
+
+int main(void)
+{
+	int i;
+	int crew_id[ARR_CREW_ID_SIZE];
+	int job_id[ARR_JOB_ID_SIZE];
+	long MinCost = 0;
+
+	int crew_id_count;
+	scanf("%d", &crew_id_count);
+
+	for(i = 0; i < crew_id_count; i++)
+	{
+		scanf("%d", &crew_id[i]);
+	}
+
+
+	int job_id_count;
+	scanf("%d", &job_id_count);
+
+	for(i = 0; i < job_id_count; i++)
+	{
+		scanf("%d", &job_id[i]);
+	}
+
+
+	MinCost = getMinCost(crew_id_count, crew_id, job_id_count, job_id);
+
+	printf("%ld\n", MinCost);
+
+}

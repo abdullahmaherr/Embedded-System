@@ -1,0 +1,35 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : subarray_sum.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+
+#define ARR_NUMBER_SIZE 100000
+#define ARR_QUERY_SIZE 100000
+
+long *findSum(int numbers_count, int *numbers, int queries_rows, int queries_columns, int **queries, int *result_count)
+{
+
+}
+
+
+int main(void)
+{
+	int number[ARR_NUMBER_SIZE];
+	int queries[ARR_QUERY_SIZE][3];
+	int i,j;
+
+
+	int numbers_count = 0;
+	scanf("%d,&numbers_count");
+
+	for()
+
+}

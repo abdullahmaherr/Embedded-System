@@ -1,0 +1,59 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : string_anagram.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+/*
+
+void swap(int *a,int *b)
+{
+	(*a) = (*a) + (*b);
+	(*b) = (*a) - (*b);
+	(*a) = (*a) - (*b);
+}
+
+
+void arrange_ascend(int *arr,int size)
+{
+	int i,j;
+
+	for(i = 0; i < size; i++)
+	{
+		for(j = 0; j < size-i-1; j++)
+		{
+			if(arr[j] < arr[j+1])
+			{
+				swap(&arr[j], &arr[j+1]);
+			}
+
+		}
+	}
+
+	for(i = 0; i < size; i++)
+	{
+		printf("%d",arr[i]);
+		fflush(stdin);fflush(stdout);
+	}
+}
+
+*/
+int main(void)
+{
+	int a = 5,b = 6, c = 10, d = 13;
+
+	if(((float)a/c) == ((float)b/d))
+	{
+		printf("helll");
+	}
+}
+
+

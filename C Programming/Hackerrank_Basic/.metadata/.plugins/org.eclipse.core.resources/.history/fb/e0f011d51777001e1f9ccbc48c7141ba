@@ -1,0 +1,128 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : string_anagram.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+void countCharfreq( char *str, int *arr)
+{
+	while(*str)
+	{
+		arr[(*str) - 'a']++;
+		str++;
+	}
+}
+
+int stringAnagram(char **dictionary, int dictionaryCount, char **query, int queryCount)
+{
+	int *result = (int *)calloc(queryCount, sizeof(int));
+
+
+	int **dictFreq = (int **)malloc(dictionaryCount * sizeof(int *));
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		dictFreq[i] = (int *)calloc(26, sizeof(int));
+		countCharfreq(dictionary[i], dictFreq[i]);
+	}
+
+
+	for (int i = 0; i < queryCount; i++)
+	{
+		int queryLen = strlen(query[i]);
+		int *queryFreq = (int *)calloc(26, sizeof(int));
+		countCharfreq(query[i], queryFreq);
+
+
+		for (int j = 0; j < dictionaryCount; j++)
+		{
+
+			if (strlen(dictionary[j]) == queryLen)
+			{
+				// Compare character frequencies
+				int k;
+				for (k = 0; k < 26; k++)
+				{
+					if (dictFreq[j][k] != queryFreq[k])
+						break;
+				}
+
+				if (k == 26)
+					result[i]++;
+			}
+		}
+
+		free(queryFreq);
+	}
+
+	// Print the result
+	for (int i = 0; i < queryCount; i++)
+	{
+		printf("%d\n", result[i]);
+	}
+
+	free(result);
+
+	// Free the allocated memory
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		free(dictFreq[i]);
+	}
+	free(dictFreq);
+
+	return 0;
+}
+
+int main()
+{
+	int dictionaryCount;
+	scanf("%d", &dictionaryCount);
+
+
+	char **dictionary = (char **)malloc(dictionaryCount * sizeof(char *));
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		dictionary[i] = (char *)malloc(16 * sizeof(char));
+		scanf("%15s", dictionary[i]);
+	}
+
+	int queryCount;
+	scanf("%d", &queryCount);
+
+
+	char **query = (char **)malloc(queryCount * sizeof(char *));
+	for (int i = 0; i < queryCount; i++)
+	{
+		query[i] = (char *)malloc(16 * sizeof(char));
+		scanf("%15s", query[i]);
+	}
+
+
+	stringAnagram(dictionary, dictionaryCount, query, queryCount);
+
+
+	for (int i = 0; i < dictionaryCount; i++)
+	{
+		free(dictionary[i]);
+	}
+	free(dictionary);
+
+	for (int i = 0; i < queryCount; i++)
+	{
+		free(query[i]);
+	}
+	free(query);
+
+	return 0;
+}
+
+

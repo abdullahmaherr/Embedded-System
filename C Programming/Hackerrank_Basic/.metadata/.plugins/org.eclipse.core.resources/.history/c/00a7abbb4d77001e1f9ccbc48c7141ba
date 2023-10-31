@@ -1,0 +1,82 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : unexpected_demand.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define ARR_ORDER_SIZE 200000
+
+
+void swap(int *a,int *b)
+{
+	(*a) = (*a) + (*b);
+	(*b) = (*a) - (*b);
+	(*a) = (*a) - (*b);
+}
+
+
+void arrange_desc(int *arr,int size)
+{
+	int i,j;
+
+	for(i = 0; i < size; i++)
+	{
+		for(j = 0; j < size-i-1; j++)
+		{
+			if(arr[j] > arr[j+1])
+			{
+				swap(&arr[j], &arr[j+1]);
+			}
+
+		}
+	}
+}
+
+
+
+void filledOrders(int order_count, int *order, int k)
+{
+	int i = 0,temp,count = 0;
+
+	arrange_desc(order,order_count);
+
+	while(temp <= k)
+	{
+		temp += order[i]
+	}
+
+	printf("%d",count);
+}
+
+
+
+int main(void)
+{
+	int i,order_count = 0,k;
+	int order[ARR_ORDER_SIZE];
+
+	scanf("%d",&order_count);
+	fflush(stdin);fflush(stdout);
+
+	for(i = 0; i<order_count; i++)
+	{
+		scanf("%d",&order[i]);
+		fflush(stdin);fflush(stdout);
+	}
+
+	scanf("%d",&k);
+	fflush(stdin);fflush(stdout);
+
+	filledOrders(order_count,*order,k);
+
+	return 0;
+}

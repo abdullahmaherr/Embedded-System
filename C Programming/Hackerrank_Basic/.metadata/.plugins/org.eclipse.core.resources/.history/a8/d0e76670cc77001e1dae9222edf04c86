@@ -1,0 +1,44 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : nearly_similar_rectangle.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define ARR_SIDES_SIZE	100000
+
+long nearlySimilarRectangles(int sides_rows, int sides_columns, long **sides)
+{
+
+}
+
+
+int main(void)
+{
+	int i,j;
+	int sides_rows,sides_columns;
+	long sides[ARR_SIDES_SIZE][2];
+
+	scanf("%d",&sides_rows);
+	fflush(stdin);fflush(stdout);
+
+	scanf("%d",&sides_columns);
+	fflush(stdin);fflush(stdout);
+	for(i = 0; i < sides_rows; i++)
+	{
+		for(j = 0; j < sides_columns; j++)
+		{
+			scanf("%d",&sides[i][j]);
+			fflush(stdin);fflush(stdout);
+		}
+	}
+}
+

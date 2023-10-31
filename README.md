@@ -5,6 +5,8 @@ This repository contains files and resources documenting my learning journey in 
 1. Assignments 
 2. Problem Solving
 3. Projects are written in C
+4. Hackerranck Problem Solving(Basic)
+
 
 ## Embedded C
 1. GNU Make (Make File, Startup, Linker)

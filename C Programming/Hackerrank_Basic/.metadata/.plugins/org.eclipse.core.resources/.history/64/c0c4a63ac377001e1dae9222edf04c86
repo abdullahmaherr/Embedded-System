@@ -1,0 +1,27 @@
+/*************************************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : parallel_processing.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ *************************************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+long long minTime(int files_count, int *files, int numCores, int limit)
+{
+
+}
+
+
+
+int main(void)
+{
+	int files_count= 0;
+}

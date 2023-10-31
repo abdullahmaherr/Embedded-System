@@ -1,0 +1,7 @@
+12:41:30 **** Rebuild of configuration Debug for project Nearly_Similar_Rectangle ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o nearly_similar_rectangle.o "..\\nearly_similar_rectangle.c" 
+gcc -o Nearly_Similar_Rectangle.exe nearly_similar_rectangle.o 
+
+12:41:50 Build Finished. 0 errors, 0 warnings. (took 20s.135ms)
+

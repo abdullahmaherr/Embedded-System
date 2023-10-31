@@ -1,0 +1,44 @@
+/**********************************************************************************************
+ * Project : Hackerrank Basic
+ *
+ * File Name : unexpected_demand.c
+ *
+ * Author: Abdullah Maher
+ *
+ * Description :
+ *
+ * Created on: JUL 10, 2023
+ **********************************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define ARR_ORDER_SIZE 200000
+
+
+void filledOrders(int order_count, int *order, int k)
+{
+
+}
+
+
+
+int main(void)
+{
+	int i,order_count = 0,k;
+	int order[ARR_ORDER_SIZE];
+
+	scanf("%d",&order_count);
+	fflush(stdin);fflush(stdout);
+
+	for(i = 0; i<order_count; i++)
+	{
+		scanf("%d",&order[i]);
+		fflush(stdin);fflush(stdout);
+	}
+
+	scanf("%d",&k);
+	fflush(stdin);fflush(stdout);
+
+	filledOrders(order_count,*order,k)
+}
