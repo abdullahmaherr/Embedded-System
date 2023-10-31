@@ -4,7 +4,7 @@ This repository contains files and resources documenting my learning journey in 
 ## C Programming
 1. Assignments 
 2. Problem Solving
-3. Projects are written in C
+3. Projects written in C
 4. Hackerranck Problem Solving(Basic)
 
 
