@@ -15,10 +15,12 @@
 
 #define ARR_STRING_SIZE 200000
 
+
+
 char *findSubstring(char *s, int k)
 {
-	int i,j,count = 0,temp = 0;
-	char *result = 	"Not Found";
+	int i,j,count = 0,length = 0;
+	static char result[ARR_STRING_SIZE] = "Not Found";
 	char arr[ARR_STRING_SIZE] = {0};
 
 	for(i = 0; i < (strlen(s)-k+1); i++)
@@ -31,11 +33,12 @@ char *findSubstring(char *s, int k)
 			}
 			arr[j-i] = s[j];
 		}
+		arr[j] = '\0';
 
-		if(count > temp)
+		if(count > length)
 		{
-			result = arr;
-			temp = count;
+			strcpy(result,arr);
+			length = count;
 		}
 		count = 0;
 	}
