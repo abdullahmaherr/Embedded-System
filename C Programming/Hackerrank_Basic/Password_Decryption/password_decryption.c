@@ -41,11 +41,10 @@ char *decryptPassword(char *s)
 
 	for(i = 0; i < length-1; i++)
 	{
-		if((s[i] >= 'A') && (s[i] <= 'Z'))
+		if(s[i] == '*')
 		{
-			swap(&s[i],&s[i+1]);
-			i++;			//To Pass The Upper Case Character After Swapping
-			delete_index(s, i+1, length);
+			swap(&s[i-1],&s[i-2]);
+			delete_index(s, i, length);
 			length = strlen(s);
 		}
 
