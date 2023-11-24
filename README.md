@@ -9,8 +9,8 @@ This repository contains files and resources documenting my learning journey in 
 
 
 ## Embedded C
-1. GNU Make (Make File, Startup, Linker)
-2. Build Simple Project by Using ARM Cortex-M3 (Make File, Startup Written in C, Linker)
+1. Make File (Make File, Startup, Linker)
+2. ARM Cortex-M3 (Make File, Startup Written in C, Linker)
 
 ## Data Structure
 1. Stack(LIFO) 
