@@ -13,7 +13,7 @@
  void MemManage_Handler()__attribute__((weak, alias("Default_Handler")));;
  void BusFault_Handler()__attribute__((weak, alias("Default_Handler")));;
  void UsageFault_Handler()__attribute__((weak, alias("Default_Handler")));;
-  /* Until The 67 Interrupts..... */
+  /* Until The 76 Interrupts..... */
  
  extern int main(void);
  
@@ -24,7 +24,7 @@
  extern uint32_t _E_BSS;
  extern uint32_t _E_STACK;
  
- 
+ /* Vector Table */
  uint32_t vectors[]__attribute__((section(".vectors"))) = {
 	(uint32_t) &_E_STACK,
 	(uint32_t) &Reset_Handler,
@@ -33,21 +33,21 @@
 	(uint32_t) &MemManage_Handler,
 	(uint32_t) &BusFault_Handler,
 	(uint32_t) &UsageFault_Handler,
+	 /* Until The 76 Interrupts..... */
  
  };
 
- 
+ /* Default Handler */
   void Default_Handler()
  {
 	 Reset_Handler();
  }
  
- 
- 
+ /* Reset Handler */
   void Reset_Handler()
   {
 	  /*NOTE that _E_DATA, _S_DATA are not variable but Symbols */
-	  /*Copy .data From FLASH to SRAM*/
+	  /*Copy .data From ROM to RAM*/
 	  uint32_t Data_Size = (uint8_t *)(&_E_DATA) - (uint8_t *)(&_S_DATA);
 	  uint8_t * p_src = (uint8_t *)(&_E_TEXT);
 	  uint8_t * p_dst = (uint8_t *)(&_S_DATA);
