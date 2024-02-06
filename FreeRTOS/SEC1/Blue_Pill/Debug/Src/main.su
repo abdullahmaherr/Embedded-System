@@ -1,3 +1,0 @@
-main.c:55:6:systemInit	16	static
-main.c:72:6:vBlinkLed	16	static
-main.c:83:5:main	16	static
