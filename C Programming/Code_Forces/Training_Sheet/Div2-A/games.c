@@ -1,7 +1,7 @@
 /*************************************************************************************************************
  * Project : Code_Forces
  *
- * File Name :  night_at_the_museum.c
+ * File Name :  games.c
  *
  * Author: Abdullah Maher
  *
@@ -14,31 +14,29 @@
 
 int main (void)
 {
-	char str[100];
-	int i = 0, res = 0;
+    int n, res = 0, i,j;
 
-	scanf("%s",str);
+    scanf("%d", &n);
 
-    if(str[i] - 'a' > 13)
+    int ** games = (int **)malloc(n * sizeof(int*));
+    for(i = 0; i < n; i++)
     {
-        res += (26 - str[i] - 'a');
-    }else
-    {
-        res += (str[i] - 'a');
+        games[i] = (int *)malloc(2 * sizeof(int));
+        scanf("%d %d", &games[i][0], &games[i][1]);
     }
 
-	while(str[i+1] != '\0')
-	{
-        if(abs(str[i] - str[i+1]) > 13)
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
         {
-            res += (26 - abs(str[i] - str[i+1]));
-        }else
-        {
-            res += abs(str[i] - str[i+1]);
+            if(games[i][0] == games[j][1])
+            {
+                res++;
+            }
         }
+    }
 
-        i++;
-	}
+    free (games);
 
 	printf("%d\n",res);
 
