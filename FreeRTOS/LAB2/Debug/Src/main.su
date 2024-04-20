@@ -1,0 +1,4 @@
+main.c:50:6:systemInit	16	static
+main.c:70:6:vPushButton	16	static
+main.c:86:6:vLed	16	static
+main.c:104:5:main	16	static
