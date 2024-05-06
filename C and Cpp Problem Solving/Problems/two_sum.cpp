@@ -7,7 +7,7 @@
  *
  * Description : Write a Cpp Function that find sum of two number equal to certin value. (To be noted I'm new to C++ and used to work mainly with C Please bear with me)
  *
- * Created on: Feb 22, 2023
+ * Created on: May 6, 2024
  *************************************************************************************************************/
 #include <iostream>
 
