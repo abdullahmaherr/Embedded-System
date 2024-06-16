@@ -22,7 +22,7 @@ int main (void)
     for(i = 0; i < n; i++)
     {
         words[i] = (char*)malloc(100 * sizeof(char));
-        scanf(" %s",&words[i]);
+        scanf(" %s",words[i]); //NOTE scanf(" %s",&words[i]); The latter will pass the address of the pointer which is not what scanf expects.
     }
 
     for(i = 0; i < n; i++)
@@ -36,7 +36,11 @@ int main (void)
         {
             printf("%c%d%c\n",words[i][0],temp-2,words[i][temp - 1]);
         }
+
+        free(words[i]);
     }
+
+    free(words);
 
     return 0;
 }
