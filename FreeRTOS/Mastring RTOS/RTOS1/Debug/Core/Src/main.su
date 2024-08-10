@@ -1,0 +1,8 @@
+main.c:72:5:main	72	static
+main.c:149:6:SystemClock_Config	72	static
+main.c:188:13:MX_USART2_UART_Init	8	static
+main.c:221:13:MX_GPIO_Init	32	static
+main.c:252:6:StartDefaultTask	16	static
+main.c:271:6:initMyTask2	16	static
+main.c:291:6:HAL_TIM_PeriodElapsedCallback	16	static
+main.c:308:6:Error_Handler	4	static
