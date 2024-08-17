@@ -1,0 +1,20 @@
+14:32:34 **** Incremental Build of configuration Debug for project FreeRTOS_1 ****
+make -j4 all 
+arm-none-eabi-gcc -gdwarf-2 "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc  -gdwarf-2 -o "FreeRTOS_1.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\abdul\Desktop\Mastring RTOS\FreeRTOS_1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreeRTOS_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FreeRTOS_1.elf
+ 
+arm-none-eabi-objdump -h -S  FreeRTOS_1.elf  > "FreeRTOS_1.list"
+arm-none-eabi-objcopy  -O binary  FreeRTOS_1.elf  "FreeRTOS_1.bin"
+arm-none-eabi-size   FreeRTOS_1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12496	     24	   5720	  18240	   4740	FreeRTOS_1.elf
+Finished building: default.size.stdout
+Finished building: FreeRTOS_1.bin
+ 
+ 
+Finished building: FreeRTOS_1.list
+ 
+
+14:32:51 Build Finished. 0 errors, 0 warnings. (took 17s.21ms)
+

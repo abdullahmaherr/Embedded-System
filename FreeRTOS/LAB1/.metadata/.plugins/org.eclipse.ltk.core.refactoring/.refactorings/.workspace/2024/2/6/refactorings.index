@@ -1,6 +1,0 @@
-1707233968171	Delete resource 'Blue_Pill/Drivers/MCAL/GPIO/stm32f103c8_gpio_driver.c'
-1707234000787	Delete resource 'Blue_Pill/Drivers/Inc/stm32f103c8_gpio_driver.h'
-1707235927738	Delete resource 'Blue_Pill/FreeRTOS/portable/MemMang/heap_1.c'
-1707235930911	Delete resource 'Blue_Pill/FreeRTOS/portable/MemMang/heap_3.c'
-1707235934208	Delete resource 'Blue_Pill/FreeRTOS/portable/MemMang/heap_2.c'
-1707235937880	Delete resource 'Blue_Pill/FreeRTOS/portable/MemMang/heap_5.c'

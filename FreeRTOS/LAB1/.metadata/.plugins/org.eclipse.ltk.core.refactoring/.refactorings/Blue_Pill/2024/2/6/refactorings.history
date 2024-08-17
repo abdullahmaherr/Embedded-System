@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;portmacro.h&apos; to &apos;include&apos;" description="Move &apos;portmacro.h&apos; to &apos;include&apos;" destination="FreeRTOS/include" element1="FreeRTOS/portable/GCC/ARM_CM3/portmacro.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1707235774243" updateReferences="true"/>
-</session>
